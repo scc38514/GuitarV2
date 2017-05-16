@@ -6,7 +6,7 @@ public class GuitarSpec {
 	  private String type;
 	  private String backWood;
 	  private String topWood;
-     private String numStrings;
+      private String numStrings;
 	  public GuitarSpec(){};
 	  public String getBuilder() {
 		return builder;
@@ -38,6 +38,15 @@ public class GuitarSpec {
 	public void setTopWood(String topWood) {
 		this.topWood = topWood;
 	}
+	 public GuitarSpec(String builder, String model, String type, String backWood, String topWood, String numStrings) {
+			super();
+			this.builder = builder;
+			this.model = model;
+			this.type = type;
+			this.backWood = backWood;
+			this.topWood = topWood;
+			this.numStrings = numStrings;
+		}
 	 public boolean matches(GuitarSpec otherSpec) {
 	        if(otherSpec.builder.length() > 0){
 	            if(!builder.toLowerCase().equals(otherSpec.builder.toLowerCase()))
